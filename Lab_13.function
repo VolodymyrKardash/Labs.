@@ -1,0 +1,13 @@
+#include <math.h>
+#ifndef _myfun
+#define _myfun
+float  sum_det(float **a,float **b,float **c) 
+{   
+   for(int i=0;i<=2;i++)
+   			for(int j=0;j<=2;j++)c[i][j]=a[i][j]+b[i][j];
+	float det;
+	det=c[0][0]*c[1][1]*c[2][2]+c[0][1]*c[1][2]*c[2][0]+c[0][2]*c[1][0]*c[2][1]-c[0][2]*c[1][1]*c[2][0]-c[0][1]*c[1][0]*c[2][2]-c[0][0]*c[1][2]*c[2][1];
+        
+        return det;
+}
+#endif
